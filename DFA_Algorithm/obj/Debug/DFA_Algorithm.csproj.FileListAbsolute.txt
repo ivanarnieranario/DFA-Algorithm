@@ -1,0 +1,17 @@
+c:\users\-shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\bin\Debug\DFA_Algorithm.exe.config
+c:\users\-shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\bin\Debug\DFA_Algorithm.exe
+c:\users\-shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\bin\Debug\DFA_Algorithm.pdb
+c:\users\-shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\obj\Debug\DFA_Algorithm.csprojResolveAssemblyReference.cache
+c:\users\-shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\obj\Debug\DFA_Algorithm.frmMain.resources
+c:\users\-shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\obj\Debug\DFA_Algorithm.Properties.Resources.resources
+c:\users\-shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\obj\Debug\DFA_Algorithm.csproj.GenerateResource.Cache
+c:\users\-shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\obj\Debug\DFA_Algorithm.exe
+c:\users\-shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\obj\Debug\DFA_Algorithm.pdb
+C:\Users\-Shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\obj\Debug\DFA_Algorithm.frmTransition.resources
+C:\Users\-Shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\obj\Debug\DFA_Algorithm.frmDiagram.resources
+C:\Users\-Shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\bin\Debug\Microsoft.GLEE.dll
+C:\Users\-Shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\bin\Debug\Microsoft.GLEE.Drawing.dll
+C:\Users\-Shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\bin\Debug\Microsoft.GLEE.GraphViewerGDI.dll
+C:\Users\-Shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\bin\Debug\Microsoft.GLEE.pdb
+C:\Users\-Shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\bin\Debug\Microsoft.GLEE.Drawing.pdb
+C:\Users\-Shadow-\documents\visual studio 2013\Projects\DFA_Algorithm\DFA_Algorithm\bin\Debug\Microsoft.GLEE.GraphViewerGDI.pdb
