@@ -53,7 +53,6 @@ namespace DFA_Algorithm
 
                 return "qR";
             }
-
         }
 
         private String checkValue(String value)

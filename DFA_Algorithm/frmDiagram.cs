@@ -37,6 +37,10 @@ namespace DFA_Algorithm
 
             int rowCount = tables.Rows.Count;
             String[] nodes = new String[rowCount];
+
+            int left = 0;
+            int right = 1;
+
             for (int x = 0; x < rowCount; x++)
                 nodes[x] = "q" + x;
 
@@ -45,13 +49,83 @@ namespace DFA_Algorithm
                 {
                     foreach (DataGridViewRow row in tables.Rows)
                     {
-                        if (row.Index == tables.Rows.Count - 1)
-                            break;
-
-                        graph.AddEdge("q"+row.Index,column.HeaderText,row.Cells[column.Index].Value.ToString());
                         
+                        String source = "q"+row.Index;
+                        String des = row.Cells[column.Index].Value.ToString();
+
+                        if (frmTransition.isEndWith == false)
+                        {
+
+                            if (row.Index == tables.Rows.Count - 1)
+                                break;
+
+                            if (source.Equals("qR") || des.Equals("qR"))
+                            {
+                                graph.AddEdge(source, column.HeaderText, des).EdgeAttr.Color = Microsoft.Glee.Drawing.Color.Red;
+                                continue;
+                            }
+
+                            graph.AddEdge(source, column.HeaderText, des).EdgeAttr.Color = Microsoft.Glee.Drawing.Color.Blue;
+                        }
+                        else
+                        {
+
+                            int dest = int.Parse(des.Substring(1));
+
+                            if (row.Index < dest)
+                            {
+                                graph.AddEdge(source, column.HeaderText, des).EdgeAttr.Color = Microsoft.Glee.Drawing.Color.Blue;
+                                continue;
+                            }
+
+                            graph.AddEdge(source, column.HeaderText, des).EdgeAttr.Color = Microsoft.Glee.Drawing.Color.Red;
+                        }
+
+                   
+
                     }
                 }
+
+
+
+            if (frmTransition.isEndWith == false)
+            {
+                try
+                {
+                    graph.FindNode("qR").Attr.Fillcolor = Microsoft.Glee.Drawing.Color.Red;
+                    graph.FindNode("qR").Attr.Fontcolor = Microsoft.Glee.Drawing.Color.White;
+
+                }catch(Exception){
+                    MessageBox.Show("No rejected found.");
+                }
+
+                graph.FindNode("q0").Attr.Fillcolor = Microsoft.Glee.Drawing.Color.Green;
+                graph.FindNode("q0").Attr.Fontcolor = Microsoft.Glee.Drawing.Color.White;
+
+                graph.FindNode(nodes[rowCount - 2]).Attr.Fillcolor = Microsoft.Glee.Drawing.Color.Blue;
+                graph.FindNode(nodes[rowCount - 2]).Attr.Fontcolor = Microsoft.Glee.Drawing.Color.White;
+            }
+            else
+            {
+                graph.FindNode(nodes[rowCount-1]).Attr.Fillcolor = Microsoft.Glee.Drawing.Color.Blue;
+                graph.FindNode(nodes[rowCount - 1]).Attr.Fontcolor = Microsoft.Glee.Drawing.Color.WhiteSmoke;
+
+                for (int x = 0; x < rowCount - 1; x++)
+                {
+                    if (x == 0)
+                    {
+                        graph.FindNode(nodes[x]).Attr.Fillcolor = Microsoft.Glee.Drawing.Color.Red;
+                        graph.FindNode(nodes[x]).Attr.Fontcolor = Microsoft.Glee.Drawing.Color.WhiteSmoke;
+                    }
+                    else
+                    {
+                        graph.FindNode(nodes[x]).Attr.Fillcolor = Microsoft.Glee.Drawing.Color.Red;
+                        graph.FindNode(nodes[x]).Attr.Fontcolor = Microsoft.Glee.Drawing.Color.WhiteSmoke;
+                    }
+                }
+            }
+
+
 
 
             viewer.Graph = graph;

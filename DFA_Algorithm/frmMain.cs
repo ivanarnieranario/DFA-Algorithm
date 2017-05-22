@@ -85,6 +85,12 @@ namespace DFA_Algorithm
 
         private void txtInput_TextChanged(object sender, EventArgs e)
         {
+
+            generate();
+        }
+
+        private void generate()
+        {
             String input = txtInput.Text;
             if (!input.Contains(" ") && !string.IsNullOrEmpty(input))
             {
@@ -95,9 +101,7 @@ namespace DFA_Algorithm
                 lblOutputs.Text = string.Empty;
                 lblQ.Text = string.Empty;
             }
-                
         }
-
 
         private void displayMModel()
         {
@@ -139,6 +143,11 @@ namespace DFA_Algorithm
             lblOutputs.Text += "Qo = q0 " + Environment.NewLine + Environment.NewLine;
             lblOutputs.Text += "∑ = { " + input + " }" + Environment.NewLine;
             lblOutputs.Text += finalState =  "F = { " + "q" + length + " }";
+        }
+
+        private void cbAlgo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            generate();
         }
 
      

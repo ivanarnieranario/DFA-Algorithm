@@ -97,6 +97,7 @@
             this.cbAlgo.Name = "cbAlgo";
             this.cbAlgo.Size = new System.Drawing.Size(304, 34);
             this.cbAlgo.TabIndex = 10;
+            this.cbAlgo.SelectedIndexChanged += new System.EventHandler(this.cbAlgo_SelectedIndexChanged);
             // 
             // label2
             // 
